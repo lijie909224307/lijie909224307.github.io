@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>测后即瞎</title>
+		<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+		<link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+		<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="https://www.layuicdn.com/layui/layui.js"></script>
+	</head>
+
+	<body>
+		<div class="container">
+			<div class="row" id="container" style="border: solid 1px #000000;margin: 0 auto;"></div>
+		</div>
+
+		<script type="text/javascript">
+			layui.use(['laydate', 'laypage', 'layer', 'table', 'carousel', 'upload', 'element'], function() {
+				let layer = layui.layer;
+
+				function CliCli() {
+					this.settings = {};
+				}
+				CliCli.prototype = {
+					init: function(opts) {
+						let maxWidth = window.innerWidth;
+						let maxHeight = window.innerHeight;
+						this.settings = {
+							maxWidth: maxWidth,
+							maxHeight: maxHeight,
+							col: 3,
+							difIndex: -1
+						}
+						// 计算环境宽高
+						this.settings.heightWidth = maxWidth > maxHeight ? maxHeight : maxWidth;
+						this.create();
+					},
+					create: function() {
+						let _this = this;
+						$('#container').empty();
+						let heightWidth = this.settings.heightWidth;
+						// 设置实时宽高
+						$('#container').css('width', heightWidth + 'px');
+						$('#container').css('height', heightWidth + 'px');
+						$('#container').css('padding', '2px');
+
+						// 摆放方块
+						for(let i = 0, col = this.settings.col; i < col; i++) {
+							let row = $('<div>').addClass('col-xs-12')
+								.css('height', parseInt((heightWidth - 4) / col) + 'px')
+								.css('width', heightWidth + 'px')
+								.css('padding', '0px');
+
+							for(let j = 0; j < col; j++) {
+								$(row).append(
+									$('<div>').addClass('unit')
+									.css('height', parseInt((heightWidth - 4) / col) + 'px')
+									.css('width', parseInt((heightWidth - 4) / col) + 'px')
+									.css('float', 'left')
+									.css('border', 'solid 2px #FFF')
+									.css('border-radius', '5px')
+								);
+							}
+
+							$('#container').append(row);
+						}
+						// 上颜色
+						let r = parseInt(Math.random() * 256);
+						let g = parseInt(Math.random() * 256);
+						let b = parseInt(Math.random() * 256);
+						let color = '#' + toFF(r) + toFF(g) + toFF(b);
+						$('.unit').css('background-color', color);
+						// 随机找一个颜色不一样
+						let difIndex = parseInt(Math.random() * $('.unit').length);
+						r = parseInt((r * this.settings.col / 10));
+						g = parseInt((g * this.settings.col / 10));
+						b = parseInt((b * this.settings.col / 10));
+
+						let difColor = '#' + toFF(r) + toFF(g) + toFF(b);
+						$('.unit').eq(difIndex).css('background-color', difColor);
+						this.settings.difIndex = difIndex;
+						this.bindEvent();
+					},
+					bindEvent: function() {
+						let _this = this;
+						$('.unit').bind('click', function() {
+							let i = $('.unit').index(this);
+							if(i == _this.settings.difIndex) {
+								_this.settings.col += 1;
+								_this.create();
+
+							} else {
+								layer.confirm('瞎不瞎?', {
+									icon: 3,
+									title: '提示',
+									btn: ['你说的对', '我不服']
+								}, function(index, layero) {
+									_this.init();
+									layer.close(index);
+								});
+							}
+						});
+					},
+
+				}
+				new CliCli().init();
+
+				function toFF(n) {
+					let s = '0' + n.toString(16);
+					return s.substr(s.length - 2);
+				}
+
+			});
+		</script>
+	</body>
+
+</html>
