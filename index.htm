@@ -1,126 +1,543 @@
 <!DOCTYPE html>
 <html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=yes">
+    <title>欣属官网</title>
+    <meta name="description" content="欣属，让我们零距离。工作，求职，交友，附近的商家，身边的直播，这里都有你的菜" />
+    <meta name="keywords" content="欣属app下载，蓝创科技，新生代科技app下载" />
+</head>
+<body>
+<link rel="stylesheet" type="text/css" href="./css/base.css" />
+<link rel="stylesheet" type="text/css" href="./css/animate.min.css" />
+<link rel="stylesheet" type="text/css" href="./css/owl.carousel.css" />
+<link rel="stylesheet" type="text/css" href="./css/style.css" />
+<!-- <link rel="stylesheet" type="text/css" href="./css/style_local.css" /> -->
+<link rel="stylesheet" type="text/css" href="./css/responsive.css" />
+<!-- <script src="./js/jquery-1.11.0.min.js"></script>
+<script src="./js/wow.min_1.js"></script>
+<script src="./js/owl.carousel.min.js"></script>
+<script src="./js/page.js"></script> -->
 
-	<head>
-		<meta charset="UTF-8">
-		<title>欣📕APP管理界面</title>
-		<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
-	</head>
-
-	<body>
+<style>
+	body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td {
+	    margin: 0;
+	    padding: 0;
+	}
+	
+	.contain_box {
+		/* width: 100%;
+		height: 540px;
+		background: #D988DA url(./images/ad1.png) 0px 5px no-repeat; */
+		overflow: hidden;
+		background: #D988DA;
+		height: 540px;
+		padding-top: 120px;
+	}
+	.contain_box .page-1 {
+		    width: 100%;
+		    height: 540px;
+			
+		    margin-left: 10%;
+		    position: relative;
+	}
+	.contain_box .page-1 .bg {
+		width: 1288px;
+		height: 540px;
+		background: #D988DA url(./images/ad1.png) 0px 5px no-repeat;
+	}
+	
+	.contain_box a, .banner a:hover {
+	    text-decoration: none;
+	    cursor: pointer;
+	}
+	
+	.contain_box .download-btn {
+	    color: #267be5;
+	    background: #fff url(./images/icon.png) 21px -57px no-repeat;
+	}
+	
+	}
+	.contain_box .banner-btn {
+	    width: 105px;
+	    height: 51px;
+	    display: inline-block;
+	    border: 2px solid #fff;
+	    font-size: 20px;
+	    line-height: 51px;
+	    padding-left: 65px;
+	}
+	
+	#entryCon {
+		margin-left: 0 ;
+	    display: flex;
+	    position: absolute;
+	    justify-content: space-between;
+	    flex-wrap: nowrap;
+	    top: 500px;
+	    left: 20px;
+		background-color: #D988DA;
+	}
+	
+	.contain_box .download-btn{
+		font: 12px/1.5 "Microsoft YaHei","微软雅黑",arial,simsun,"宋体";
+		-webkit-font-smoothing: antialiased;
+		text-decoration: none;
+		cursor: pointer;
+		width: 105px;
+		height: 51px;
+		display: inline-block;
+		border: 2px solid #fff;
+		font-size: 20px;
+		line-height: 51px;
+		padding-left: 65px;
+		color: #fff;
+		background: url(http://s.momocdn.com/static/w5/img/website/icon.png) 20px -163px no-repeat;
+		margin-left: 26px;
+	}
+	
+	.contain_box .ad-link{
+		font: 12px/1.5 "Microsoft YaHei","微软雅黑",arial,simsun,"宋体";
+		-webkit-font-smoothing: antialiased;
+		text-decoration: none;
+		cursor: pointer;
+		width: 105px;
+		height: 51px;
+		display: inline-block;
+		border: 2px solid #fff;
+		font-size: 20px;
+		line-height: 51px;
+		padding-left: 65px;
+		color: #fff;
+		background: url(http://s.momocdn.com/static/w5/img/website/icon.1.0.1.png) -250px -32px no-repeat;
+		margin-left: 26px;	
 		
-		<!--<div class="container">
-			<div class="row" id="container" style="border: solid 1px #000000;margin: 0 auto;"></div>
+	}
+	
+	.contain_box .ad-business{
+		font: 12px/1.5 "Microsoft YaHei","微软雅黑",arial,simsun,"宋体";
+		-webkit-font-smoothing: antialiased;
+		color: #fff;
+		background: url("https://s.momocdn.com/w/u/others/2018/04/11/1523447258527-invalid-name@2x.png") no-repeat;
+		background-position: 18px 8px;
+		margin-left: 26px;
+		text-decoration: none;
+		cursor: pointer;
+		width: 105px;
+		height: 51px;
+		display: inline-block;
+		border: 2px solid #fff;
+		font-size: 20px;
+		line-height: 51px;
+		padding-left: 65px;
+		
+	}
+	
+	section {
+		font: 12px/1.5 "Microsoft YaHei","微软雅黑",arial,simsun,"宋体";
+		-webkit-font-smoothing: antialiased;
+		width: 1200px;
+		margin: 180px auto 0;
+		text-align: center;
+		padding-left: 10px;
+	}
+	
+	section {
+	    width: 1200px;
+	    margin: 180px auto 0;
+	    text-align: center;
+	}
+	user agent stylesheet
+	section {
+	    display: block;
+	}
+	
+	.sec-1 {
+	    padding-left: 10px;
+	}
+	
+	.note {
+	    font-size: 20px;
+	    line-height: 20px;
+	    color: #6f6f6f;
+	    font-weight: 100;
+	    margin: 22px 0 80px;
+	}
+	
+	
+	div, ul, li, img, dl, dt, dd {
+	    margin: 0;
+	    padding: 0;
+	}
+	ul, ol {
+	    list-style: none;
+	}
+	body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td {
+	    margin: 0;
+	    padding: 0;
+	}
+	
+	ul {
+	    display: block;
+	    list-style-type: disc;
+	    margin-block-start: 1em;
+	    margin-block-end: 1em;
+	    margin-inline-start: 0px;
+	    margin-inline-end: 0px;
+	    padding-inline-start: 40px;
+	}
+	
+	.clearfix {
+	    *zoom: 1;
+		font: 12px/1.5 "Microsoft YaHei","微软雅黑",arial,simsun,"宋体";
+		-webkit-font-smoothing: antialiased;
+		text-align: center;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+	
+	.clearfix #menu{
+		*zoom: 1;
+			font: 12px/1.5 "Microsoft YaHei","微软雅黑",arial,simsun,"宋体";
+			-webkit-font-smoothing: antialiased;
+			text-align: center;
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			display: block;
+			overflow: hidden;
+			white-space:nowrap;//处理块元素中的空白符和换行
+		}
+	}
+	
+	.clearfix #menu li {
+		font: 12px/1.5 "Microsoft YaHei","微软雅黑",arial,simsun,"宋体";
+		-webkit-font-smoothing: antialiased;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		float: left;
+		margin-right: 3px;
+		list-style: none;
+		display: inline-block;//使li对象显示为一行
+		margin-left: 15px;
+		width: 130px;
+	}
+	
+	.sec-1 li {
+	    float: left;
+	    margin-right: 3px;
+	}
+	
+	.sec-2 {
+		-webkit-font-smoothing: antialiased;
+		font: 12px / 1.5 "Microsoft YaHei", 微软雅黑, arial, simsun, 宋体;
+		width: 1200px;
+		margin: 180px auto 0;
+		text-align: center;
+	}
+	
+	h2 {
+	    display: block;
+	    font-size: 1.5em;
+	    margin-block-start: 0.83em;
+	    margin-block-end: 0.83em;
+	    margin-inline-start: 0px;
+	    margin-inline-end: 0px;
+	    font-weight: bold;
+	}
+	
+	
+	.tit {
+	    font-size: 30px;
+	    color: #4a4a4a;
+	    font-weight: 100;
+	    height: 30px;
+	    line-height: 30px;
+	}
+	
+	.note {
+	    font-size: 20px;
+	    line-height: 20px;
+	    color: #6f6f6f;
+	    font-weight: 100;
+	    margin: 22px 0 80px;
+	}
+	
+	p {
+	    display: block;
+	    margin-block-start: 1em;
+	    margin-block-end: 1em;
+	    margin-inline-start: 0px;
+	    margin-inline-end: 0px;
+	}
+	
+	.photo-wall {
+	    width: 1200px;
+	    padding: 0 7px;
+	    overflow: hidden;
+	    box-sizing: border-box;
+	    -moz-box-sizing: border-box;
+	    -webkit-box-sizing: border-box;
+		
+		-webkit-font-smoothing: antialiased;
+		font: 12px / 1.5 "Microsoft YaHei", 微软雅黑, arial, simsun, 宋体;
+		text-align: center;
+		margin: 0;
+		width: 1200px;
+		padding: 0 7px;
+		overflow: hidden;
+		-webkit-box-sizing: border-box;
+		display: block;
+	}
+	.wall-pace {
+	    width: 392px;
+	    list-style: none;
+	    overflow: hidden;
+	    float: left;
+	    position: relative;
+		margin: 0;
+		padding: 0;
+		display: block;
+		margin-block-start: 1em;
+		margin-block-end: 1em;
+		margin-inline-start: 0px;
+		margin-inline-end: 0px;
+		padding-inline-start: 40px;	
+		text-align: center;
+	}
+	
+	.wall-pace li {
+	    position: relative;
+	    float: left;
+	    margin: 0 5px 5px 0;
+	    overflow: hidden;
+	    background: #efefef;
+	}
+	
+	.wall-pace .sq-sm {
+	    width: 145px;
+		height: 145px;
+	}
+	
+	.wall-pace .rect-x, .intr-x {
+	    width: 235px;
+	    height: 146px;
+	}
+	
+
+.wall-pace .sq-lg {
+    width: 258px;
+    height: 258px;
+}
+
+	.wall-pace .rect-y {
+	    width: 123px;
+	    height: 258px;
+	}
+		
+.wall-pace .sq-lg {
+    width: 258px;
+    height: 258px;
+}
+		
+.wall-pace .rect-y {
+    width: 123px;
+    height: 258px;
+}
+		
+.wall-pace .sq-sm {
+    width: 145px;
+    height: 145px;
+}
+		
+.wall-pace .rect-x, .intr-x {
+    width: 235px;
+    height: 146px;
+}
+		
+.wall-last-3 {
+    position: absolute !important;
+    top: 151px;
+}
+		
+.wall-last-4 {
+    margin-left: 128px !important;
+}		
+</style>
+
+<div class="header">
+    <div class="rowFluid">
+        <div class="span2 col-md-12">
+            <div class="logo"> <a href="./index.html" title="返回首页"> <img src="./images/logo.png"  height=68 alt="{dede:global.cfg_webname/}" /> </a> </div>
+        </div>
+        <div class="span8">
+            <div class="mobileMenuBtn"><span class="span1"></span><span class="span2"></span><span class="span3"></span></div>
+            <div class="mobileMenuBtn_shad"></div>
+            <div class="header_menu">
+                <ul id="menu">
+
+                    <li><a href="./index.html" title="首页" class="active">网站首页</a></li>
+                    <li><a href="./pages/about_shu.html" >关于欣属</a> </li>
+                    <li><a href="./pages/content_us.html" >加入我们</a> </li>
+                    <li><a href="./pages/service_scorp.html" >服务体系</a> </li>
+                    <li><a href="./pages/contact_us.html" >联系我们</a> </li>
+                </ul>
+            </div>
+        </div>
+        <div class="span2"> </div>
+    </div>
+</div>
+
+<div class="contain_box">
+	<div class="page-1">
+		<div class="bg">
 		</div>
+	</div>
+	
+	<div id="entryCon" >
+		<a id="mm_downloads_rightnow" href="./pages/build.html" class="download-btn banner-btn ciqclickbtn" _client="PC" _page="首页" _position="banner" _name="立即下载">立即下载</a>
+		<a href="./pages/build.html" class="ad-link banner-btn">广告投放</a>
+		<a href="./pages/build.html" class="ad-business banner-btn">商家入驻</a>
+	</div>
+</div>
 
-		<script type="text/javascript">
-			layui.use(['laydate', 'laypage', 'layer', 'table', 'carousel', 'upload', 'element'], function() {
-				let layer = layui.layer;
+<section class="sec-1">
+	<h2 class="tit">让生活更有调，你我不再陌生，</h2>
+	<p class="note">欣属的世界，认识有趣的人</p>
+	<ul class="clearfix">
+		<li><img src="http://s.momocdn.com/static/w5/img/website/item1.jpg?20141105"></li>
+		<li><img src="http://s.momocdn.com/static/w5/img/website/item2.jpg?20141105"></li>
+		<li><img src="http://s.momocdn.com/static/w5/img/website/item3.jpg?20141105"></li>
+		<li><img src="http://s.momocdn.com/static/w5/img/website/item4.jpg?20141105"></li>
+	</ul>
+</section>
 
-				function CliCli() {
-					this.settings = {};
-				}
-				CliCli.prototype = {
-					init: function(opts) {
-						let maxWidth = window.innerWidth;
-						let maxHeight = window.innerHeight;
-						this.settings = {
-							maxWidth: maxWidth,
-							maxHeight: maxHeight,
-							col: 3,
-							difIndex: -1
-						}
-						// 计算环境宽高
-						this.settings.heightWidth = maxWidth > maxHeight ? maxHeight : maxWidth;
-						this.create();
-					},
-					create: function() {
-						let _this = this;
-						$('#container').empty();
-						let heightWidth = this.settings.heightWidth;
-						// 设置实时宽高
-						$('#container').css('width', heightWidth + 'px');
-						$('#container').css('height', heightWidth + 'px');
-						$('#container').css('padding', '2px');
+<section class="sec-2">
+        <h2 class="tit">身边的世界其实很精彩</h2>
+        <p class="note"></p>
+            <div class="photo-wall" id="photo-wall">
+        <ul class="wall-pace">
+            <li class="sq-sm">
+                <img src="http://s.momocdn.com/static/w5/img/website/photowall/1/25.jpg"></li>
+            <li class="rect-x">
+                <img src="http://s.momocdn.com/static/w5/img/website/photowall/2/13.jpg" style="top: 0px;">
+                <dl class="intr-x" style="top: 100%;"><dt>SuperEric</dt><dd>男24岁</dd><dd>城市：北京</dd><dd>宣言：骑机车环台湾，我在垦丁的海边等你</dd></dl>
+            </li>
+            <li class="sq-lg">
+                <img src="http://s.momocdn.com/static/w5/img/website/photowall/1/29.jpg" style="top: 0px;">
+                <dl class="intr-s" style="top: 100%;"><dt>jilon</dt><dd>男26岁</dd><dd>城市：北京</dd><dd>宣言：燃烧吧 小宇宙</dd></dl>
+            </li>
+            <li class="rect-y">
+                <img src="http://s.momocdn.com/static/w5/img/website/photowall/3/43.jpg"></li>
+        </ul>
+        <ul class="wall-pace">
+            <li class="sq-lg">
+                <img src="http://s.momocdn.com/static/w5/img/website/photowall/1/39.jpg" style="top: 0px;">
+                <dl class="intr-s" style="top: 100%;"><dt>妮妮</dt><dd>女23岁</dd><dd>城市：北京</dd><dd>宣言：表说偶系女汉几，我系大叔系女子</dd></dl>
+            </li>
+            <li class="rect-y">
+                <img src="http://s.momocdn.com/static/w5/img/website/photowall/3/15.jpg"></li>
+            <li class="sq-sm">
+                <img src="http://s.momocdn.com/static/w5/img/website/photowall/1/10.jpg"></li>
+            <li class="rect-x">
+                <img src="http://s.momocdn.com/static/w5/img/website/photowall/2/31.jpg" style="top: 0px;">
+                <dl class="intr-x" style="top: 100%;"><dt>静恬子</dt><dd>女21岁</dd><dd>城市：北京</dd><dd>宣言：只理有意思的人</dd></dl>
+            </li>
+        </ul>
+        <ul class="wall-pace">
+            <li class="rect-x">
+                <img src="http://s.momocdn.com/static/w5/img/website/photowall/2/32.jpg" style="top: 0px;">
+                <dl class="intr-x" style="top: 100%;"><dt>Ainland</dt><dd>女24岁</dd><dd>城市：北京</dd><dd>宣言：处之泰然</dd></dl>
+            </li>
+            <li class="sq-sm">
+                <img src="http://s.momocdn.com/static/w5/img/website/photowall/1/20.jpg"></li>
+            <li class="rect-y wall-last-3">
+                <img src="http://s.momocdn.com/static/w5/img/website/photowall/3/26.jpg"></li>
+            <li class="sq-lg wall-last-4">
+                <img src="http://s.momocdn.com/static/w5/img/website/photowall/1/7.jpg" style="top: 0px;">
+                <dl class="intr-s" style="top: 100%;"><dt>David</dt><dd>男21岁</dd><dd>城市：上海</dd><dd>宣言：身体和灵魂必须有一个在路上</dd></dl>
+            </li>
+        </ul>
+    </div>
+    </section>
+	
+	
 
-						// 摆放方块
-						for(let i = 0, col = this.settings.col; i < col; i++) {
-							let row = $('<div>').addClass('col-xs-12')
-								.css('height', parseInt((heightWidth - 4) / col) + 'px')
-								.css('width', heightWidth + 'px')
-								.css('padding', '0px');
 
-							for(let j = 0; j < col; j++) {
-								$(row).append(
-									$('<div>').addClass('unit')
-									.css('height', parseInt((heightWidth - 4) / col) + 'px')
-									.css('width', parseInt((heightWidth - 4) / col) + 'px')
-									.css('float', 'left')
-									.css('border', 'solid 2px #FFF')
-									.css('border-radius', '5px')
-								);
-							}
 
-							$('#container').append(row);
-						}
-						// 上颜色
-						let r = parseInt(Math.random() * 256);
-						let g = parseInt(Math.random() * 256);
-						let b = parseInt(Math.random() * 256);
-						let color = '#' + toFF(r) + toFF(g) + toFF(b);
-						$('.unit').css('background-color', color);
-						// 随机找一个颜色不一样
-						let difIndex = parseInt(Math.random() * $('.unit').length);
-						r = parseInt((r * this.settings.col / 10));
-						g = parseInt((g * this.settings.col / 10));
-						b = parseInt((b * this.settings.col / 10));
+	
 
-						let difColor = '#' + toFF(r) + toFF(g) + toFF(b);
-						$('.unit').eq(difIndex).css('background-color', difColor);
-						this.settings.difIndex = difIndex;
-						this.bindEvent();
-					},
-					bindEvent: function() {
-						let _this = this;
-						$('.unit').bind('click', function() {
-							let i = $('.unit').index(this);
-							if(i == _this.settings.difIndex) {
-								_this.settings.col += 1;
-								_this.create();
 
-							} else {
-								layer.confirm('瞎不瞎?', {
-									icon: 3,
-									title: '提示',
-									btn: ['你说的对', '我不服']
-								}, function(index, layero) {
-									_this.init();
-									layer.close(index);
-								});
-							}
-						});
-					},
+ <div class="page">
+    <div class="rowFluid">
+        <div class="span12">
+            <div class="main">
+                <div class="join_in">
+                    <div class="rowFluid">
+                        <div class="span12">
+                            <div class="container">
+                                <h2 class="tit">互联网时代，选择好的平台，为商家赋能</h2>
+                                <a href="./pages/help_online.html" class="all_button join_in_button wow fadeInUp" target="_blank">点击咨询</a> </div>
+                        </div>
+                    </div>
+                </div>
+				<div class="footer wow fadeInUp">
+					<div class="rowFluid">
+						<div class="span12">
+							<div class="container">
+								<div class="footer_content">
+									<div class="span4 col-xm-6 col-xs-12">
+										<div class="footer_list">
+											<div class="footer_cotact">
+												<div class="footer_cotact_title">联系方式</div>
+												<ul>
+													<li><span class="footer_cotact_type">地址：</span><span class="footer_cotact_content">淮安市清江浦区江苏淮安软件园299号</span></li>
+													<li><span class="footer_cotact_type">电话：</span><span class="footer_cotact_content"><a href="tel:" class="call">0517-89229689</a></span></li>
+													<li><span class="footer_cotact_type">网址：</span><span class="footer_cotact_content"><a href="http://xinshuapp.com" title="官网">www.mkfun.club</a></span></li>
+													<li><span class="footer_cotact_type">邮箱：</span><span class="footer_cotact_content">zhangshugao@lckj.wang></span></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="copyright">版权所有：淮安蓝创科技网络科技有限公司 <a href="http://www.beian.miit.gov.cn" target="_blank" style="color: #fff;">苏ICP备18009690号</a> </div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- <script>
+    (function(){
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        }
+        else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
 
-				}
-				new CliCli().init();
 
-				function toFF(n) {
-					let s = '0' + n.toString(16);
-					return s.substr(s.length - 2);
-				}
+<script>
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?e0111a90006cba9593750de3f930ca00";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
 
-			});
-		</script>-->
-		<img src="image/1.png">
-		<img src="image/2.png">
-		<img src="image/3.png">
-		<img src="image/4.png" />
-		<img src="image/5.png" />
-		<img src="image/IM.png" />
-		<img src="image/附近的人.png" />
-		<img src="image/关注.png" />
-		<img src="image/招聘.png" />
-		<img src="image/主播.png" />
-	</body>
-
+</body>
 </html>

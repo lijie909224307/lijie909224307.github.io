@@ -1,0 +1,16 @@
+.header , h1,h2,h4,h4{ 
+	display: block;
+	padding: 0;
+	margin: 0;
+}
+
+.common-header  .logo img{
+		height: 60;
+		border: none;
+		vertical-align: middle;
+		max-width: 100%;
+	}
+
+
+
+

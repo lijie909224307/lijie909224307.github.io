@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<body class="white-bg">
+		  <style>
+			  body, button, input, select, textarea {
+			      font: 12px/1.5 "Microsoft YaHei","微软雅黑",arial,simsun,"宋体";
+			      -webkit-font-smoothing: antialiased;
+			      -moz-osx-font-smoothing: grayscale;
+			  }
+			  body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td {
+			      margin: 0;
+			      padding: 0;
+			  }
+			  body {
+			      display: block;
+			      margin: 8px;
+			  }
+			  
+			  ul {
+			      display: block;
+			      list-style-type: disc;
+			      margin-block-start: 1em;
+			      margin-block-end: 1em;
+			      margin-inline-start: 0px;
+			      margin-inline-end: 0px;
+			      padding-inline-start: 40px;
+			  }
+			  
+			  ul, ol {
+			      list-style: none;
+			  }
+			  
+			  li {
+			      display: list-item;
+			      text-align: -webkit-match-parent;
+			  }
+			  
+			  header {
+			      display: block;
+			  }
+			  
+			  p {
+			      display: block;
+			      margin-block-start: 1em;
+			      margin-block-end: 1em;
+			      margin-inline-start: 0px;
+			      margin-inline-end: 0px;
+			  }
+			  
+			  .white-bg .common-header {
+			      /* background: url(https://s.momocdn.com/w/u/img/2017/03/28/1490673490237-%E5%8F%8D%E7%99%BD.png) 14px 37px no-repeat; */
+			  }
+			  
+			  .common-header {
+			      margin-left: -560px;
+			  }
+			  
+			  .common-header {
+			      color: #fff;
+			      font-size: 14px;
+			      position: absolute;
+			      top: 0px;
+			    /*  background: url(https://s.momocdn.com/w/u/img/2017/03/28/1490673490218-%E5%AE%98%E7%BD%91logo.png) 14px 37px no-repeat; */
+			      padding-left: 218px;
+			      height: 120px;
+			      left: 50%;
+			      margin-left: -508px;
+				  clear:both;
+			  }
+			  
+			  a:-webkit-any-link {
+			      color: -webkit-link;
+			      cursor: pointer;
+			      text-decoration: underline;
+			  }
+			  
+			  .common-header ul {
+			      width: 970px !important;
+			  }
+			  .common-header ul {
+			      width: 960px;
+			  }
+			  .clearfix {
+			      *zoom: 1;
+			  }
+			  .clearfix:before, .clearfix:after {
+			      display: table;
+			      content: "";
+			      line-height: 0;
+			      clear: both;
+			  }
+			  .white-bg .common-header li.no-border {
+			      background: none;
+			  }
+			  .white-bg .common-header li {
+			      background: url(//s.momocdn.com/static/w5/img/website/gray-border.png) 0 54px no-repeat;
+			  }
+			  .common-header li.no-border {
+			      background: none;
+			  }
+			  .common-header li {
+			      float: left;
+			      padding: 0 30px;
+			      background: url(//s.momocdn.com/static/w5/img/website/white-border.png) 0 54px no-repeat;
+			      height: 120px;
+			      line-height: 120px;
+			  }
+			 
+			.white-bg .common-header li {
+			    background: url(//s.momocdn.com/static/w5/img/website/gray-border.png) 0 54px no-repeat;
+			}
+			.common-header li {
+			    float: left;
+			    padding: 0 30px;
+			    background: url(//s.momocdn.com/static/w5/img/website/white-border.png) 0 54px no-repeat;
+			    height: 120px;
+			    line-height: 120px;
+			}
+			
+			.white-bg .common-header li {
+			    background: url(//s.momocdn.com/static/w5/img/website/gray-border.png) 0 54px no-repeat;
+			}
+			.common-header li {
+			    float: left;
+			    padding: 0 30px;
+			    background: url(//s.momocdn.com/static/w5/img/website/white-border.png) 0 54px no-repeat;
+			    height: 120px;
+			    line-height: 120px;
+			}
+			
+			.white-bg .common-header .white-bg-service {
+			    display: block;
+			}
+			.white-bg .common-header li {
+			    background: url(//s.momocdn.com/static/w5/img/website/gray-border.png) 0 54px no-repeat;
+			}
+			.common-header .white-bg-service {
+			    display: block;
+			    position: relative;
+			}
+			
+			.common-header li .service {
+			}
+			.white-bg .common-header a, .white-bg .common-header span {
+			    color: #6f6f6f;
+			}
+			
+			.white-bg .common-header li .service:before {
+			    border: 2px solid #1e78e7;
+			    border-top: none;
+			    border-left: none;
+			}
+			.common-header li .service:before {
+			    border: 2px solid #ffffff;
+			    border-top: none;
+			    border-left: none;
+			}
+			.common-header li .service:before {
+			    content: '';
+			    color: #1e78e7;
+			    top: 55px;
+			    right: 14px;
+			    z-index: 3000;
+			    width: 6px;
+			    height: 6px;
+			    background: none;
+			    transform: rotate(45deg);
+			    -o-transform: rotate(45deg);
+			    -ms-transform: rotate(45deg);
+			    -webkit-transform: rotate(45deg);
+			}
+			
+			.common-header li .service.business .down-list {
+			    left: -3px;
+			}
+			.white-bg .common-header li .service .down-list {
+			    background: #ffffff;
+			    border: 1px solid #e4e4e4;
+			}
+			.common-header li .service .down-list {
+			    background: #156bd4;
+			    border: 1px solid #156bd4;
+			}
+			.common-header li .service .down-list {
+			    z-index: 2000;
+			    display: none;
+			    text-align: center;
+			    line-height: 40px;
+			    color: #007aff;
+			    position: absolute;
+			    top: 90px;
+			    left: 0;
+			    width: 100%;
+			}
+			
+			.white-bg .common-header .black-bg-service {
+			    display: none;
+			}
+			.white-bg .common-header li {
+			    background: url(//s.momocdn.com/static/w5/img/website/gray-border.png) 0 54px no-repeat;
+			}
+			.common-header .black-bg-service {
+			    display: none;
+			}
+			
+			.white-bg .common-header .white-bg-service {
+			    display: block;
+			}
+			.white-bg .common-header li {
+			    background: url(//s.momocdn.com/static/w5/img/website/gray-border.png) 0 54px no-repeat;
+			}
+			.common-header .white-bg-service {
+			    display: block;
+			    position: relative;
+			}
+			
+			.common-header li .service {
+			}
+			.white-bg .common-header a, .white-bg .common-header span {
+			    color: #6f6f6f;
+			}
+			.common-header a {
+			    text-decoration: none;
+			    color: #fff;
+			}
+			a:-webkit-any-link {
+			    color: -webkit-link;
+			    cursor: pointer;
+			    text-decoration: underline;
+			}
+			
+			.white-bg .common-header span {
+			    color: #6f6f6f;
+			}
+			
+			.common-header li .service.business .down-list {
+			    left: -3px;
+			}
+			.white-bg .common-header li .service .down-list {
+			    background: #ffffff;
+			    border: 1px solid #e4e4e4;
+			}
+			.common-header li .service .down-list {
+			    background: #156bd4;
+			    border: 1px solid #156bd4;
+			}
+			.common-header li .service .down-list {
+			    z-index: 2000;
+			    display: none;
+			    text-align: center;
+			    line-height: 40px;
+			    color: #007aff;
+			    position: absolute;
+			    top: 90px;
+			    left: 0;
+			    width: 100%;
+			}
+			
+			.clearfix:after {
+			    display: table;
+			    content: "";
+			    line-height: 0;
+			    clear: both;
+			}
+			
+			.wrapper {
+			    padding-top: 120px;
+			}
+			div {
+			    display: block;
+			}
+			
+			.line {
+			    border: 0;
+			    height: 1px;
+			    background-color: #e4e4e4;
+			}
+			
+		nav {
+		    width: 960px;
+		    line-height: 110px;
+		    margin: 0 auto;
+		}
+		nav {
+		    display: block;
+		}
+		
+		nav li.on {
+		    border-bottom: 3px solid #1e78e7;
+		}
+		nav li {
+		    float: left;
+		    color: #6f6f6f;
+		    font-size: 16px;
+		    margin-right: 75px;
+		    height: 80px;
+		}
+		
+		section.info-sec-1 {
+		    text-align: center;
+		    margin-top: 100px;
+		}
+		section.info-sec {
+		    width: 960px;
+		    margin: 0px auto;
+		    font-size: 14px;
+		    margin-top: 100px;
+		}
+		section {
+		    width: 880px;
+		    margin: 45px auto 0;
+		    padding: 0 40px;
+		}
+		section {
+		    display: block;
+		}
+		.info-sec p, .info-sec li {
+		    color: #5a5959;
+		    margin-bottom: 9px;
+		}
+			
+		section.info-sec-2 {
+		    margin-top: 150px;
+		}
+		section.info-sec {
+		    width: 960px;
+		    margin: 0px auto;
+		    font-size: 14px;
+		    margin-top: 100px;
+		}
+		
+		section.info-sec-3 {
+		    margin-top: 150px;
+		    text-align: center;
+		}
+		section.info-sec {
+		    width: 960px;
+		    margin: 0px auto;
+		    font-size: 14px;
+		    margin-top: 100px;
+		}
+		.introduce {
+		    width: 800px;
+		    padding: 0 0 0 80px;
+		    margin: 120px auto 0;
+		    display: flex;
+		}
+		
+		.introduce li {
+		    width: 200px;
+		    color: #5a5959;
+		}
+		
+		.introduce li h3 {
+		    font-size: 23px;
+		}
+		
+		.introduce li .block {
+		    width: 17px;
+		    height: 5px;
+		    background: #5a5959;
+		    margin: 15px 0 20px;
+		}
+		
+		.introduce li p {
+		    font-size: 14px;
+		    margin-bottom: 10px;
+		}
+		
+		.introduce li h3 {
+		    font-size: 23px;
+		}
+		
+		.introduce li .block {
+		    width: 17px;
+		    height: 5px;
+		    background: #5a5959;
+		    margin: 15px 0 20px;
+		}
+		
+		.common-footer {
+			margin-top: 123px;
+		}
+		.common-footer {
+			color: #646464;
+			text-align: center;
+			font-size: 12px;
+			padding-bottom: 133px;
+		}
+		footer {
+			display: block;
+		}
+		
+		.common-footer ul {
+		    /* width: 428px !important; */
+		}
+		.common-footer ul {
+		    width: 410px;
+		    margin: 0 auto;
+		    margin-bottom: 30px;
+		}
+		
+		.clearfix {
+		    zoom: 1;
+		}
+		
+		.common-footer li {
+		    margin: 0 17px 30px 17px;
+		}
+		.common-footer li {
+		    float: left;
+		    margin-right: 35px;
+		    margin-bottom: 30px;
+		}
+		
+		.common-footer a {
+		    color: #646464;
+		    text-decoration: none;
+		}
+		a:-webkit-any-link {
+		    color: -webkit-link;
+		    cursor: pointer;
+		    text-decoration: underline;
+		}
+		
+		.show {
+			float: left;
+			margin-top: 50px;
+			padding-left: 35%;
+		}
+		
+		.info-sec .showbody {
+			padding-top: 30px;
+		}
+		
+		.info-sec .showbody h2{
+			margin: 30px;
+		}
+		
+		.clear {
+			clear: both;
+		}
+		
+		
+		
+		
+		
+		
+	</style>
+		<header class="common-header">
+		  <ul class="clearfix">
+		      <li class="no-border"><a class="index" href="../static/shuappnew.rar" mma="index">下载欣属</a></li>
+		     <!-- <li class="item"><a class="webmomo" href="" mma="webmomo-nav">欣属网页版</a></li> -->
+		     <!-- <li><a class="active" href="" mma="active">欣属动态</a></li> -->
+		      <!-- <li class="" id="join"><a class="join" href="http://www.immomo.com/jobs/join/index" mma="join">加入我们</a></li> -->
+		      <li class="white-bg-service"><span class="service business">关于我们<span class="down-list">
+		          <span class="item colortext"><a href="javascript:">关于我们&nbsp;&nbsp;</a></span>
+		          <span class="item"><a href="./pages/about_shu.html" mma="aboutus">关于欣属</a></span>
+		          <span class="item"><a href="./pages/contact_us.html" mma="contact">联系我们</a></span>
+		      </span></span></li>
+		      <li class="black-bg-service"><a class="service" href="http://www.immomo.com/business"></a></li>
+		      <li class="white-bg-service"><span class="service business" href="/business">业务体系<span class="down-list">
+		          <span class="item colortext"><a href="javascript:">业务体系&nbsp;&nbsp;</a></span>
+		          <span class="item"><a href="//live-star.immomo.com/admin/star/show" mma="live">欣属直播</a></span>
+		      </span></span></li>
+		      <li class="black-bg-service"><a class="service" href="./pages/help_online.html" mma="service-main">服务与帮助</a></li>
+		      <li class="white-bg-service"><span class="service">服务与帮助<span class="down-list">
+		          <span class="item colortext"><a href="http://www.immomo.com/service" mma="service-sub">服务与帮助</a></span>
+		          <span class="item"><a href="./pages/ " mma="my">帐号服务</a></span>
+		          <span class="item"><a href="http://www.immomo.com/help" mma="help">帮助中心</a></span>
+		      </span></span></li>
+		     <!-- <li><a class="active" href="https://momoinc.gcs-web.com" mma="active">投资者关系</a></li> -->
+		  </ul>
+		</header>
+		<script>
+		  $(function(){
+		    // 加入校园招聘时段
+		    var date = Date.parse(new Date()),
+		        startDate = Date.parse(new Date('2020/03/02 00:00:00')),
+		        endDate = Date.parse(new Date('2020/04/29 23:59:59'));
+		
+		    var host = 'http://www.immomo.com'
+		    if(date >= startDate && date <= endDate){
+		      $('#join').html('<span class="service business" >加入我们<span class="down-list"><span class="item colortext"><a href="javascript:">加入我们&nbsp;&nbsp;</a></span><span class="item"><a href="' + host + '/jobs/join/index" mma="aboutus">社会招聘</a></span><span class="item"><a href="https://campus.immomo.com" mma="contact">校园招聘</a></span></span></span>')
+		      $('#join').addClass('white-bg-service')
+		    } else {
+		      $('#join').html('<a class="join" href="' + host + '/jobs/join/index" mma="join">加入我们</a>')
+		      $('#join').removeClass('white-bg-service')
+		    }
+		  })
+		  
+		</script>
+		
+		
+		    
+		<div class="wrapper">
+		    <p class="line"></p>
+		    <nav>
+		        <ul class="clearfix">
+		            <li class=" on "><a href="./about_shu.html" "="">关于欣属</a></li>
+		            <li class=""><a href="./xieyi.html">用户协议</a></li>
+		            
+		        </ul>
+		    </nav>
+		    <section class="info-sec info-sec-1">
+		        <h2>关于欣属</h2>
+		        <p>欣属是蓝创公司推出的一款基于地区社交，覆盖求职、金融，直播、商家折扣、活动等，是中国领先的开放式综合平台之一。</p>
+		        <p>在欣属，你可以通过视频、文字、语音、图片来展示自己，基于地理位置发现附近的人，建立真实、有效、健康的社交关系；组团邀约，发现周边美食和有趣的人和事；工作求职更是轻松便捷，掌握一手咨询</p>
+		    </section>
+			
+			<div class="info-sec show">
+				<div class="info-sec showbody fujin">
+					<h2>附近</h2>
+					<a><img src="../images/fujin.png"> </a>
+				</div>
+				
+				<div class="info-sec showbody livevideo">
+					<h2>直播</h2>
+					<a><img src="../images/liveVideo.png"> </a>
+				</div>
+				<div class="info-sec showbody ticket ">
+					<h2>投票</h2>
+					<a><img src="../images/ticket.png"> </a>
+				</div>
+				
+				<div class="info-sec showbody IM">
+					<h2>好友</h2>
+					<a><img src="../images/IM.png"></a>
+				</div>
+				
+				<div class="info-sec showbody business">
+					<h2>身边的商家</h2>
+					<a><img src="../images/business.png"></a>
+					<h2>优惠卷</h2>
+					<a><img src="../images/discount.png"></a>
+				</div>
+				
+				<div class="info-sec showbody emplorer">
+					<h2>招聘</h2>
+					<a><img src="../images/emploeer.png"></a>
+				</div>
+				
+				<div class="info-sec showbody secondhand">
+					<h2>二手物品</h2>
+					<a><img src="../images/secondHand.png"></a>
+				</div>
+			</div>
+			<div class="clear"></div>
+			
+			
+			
+		  <!--  <section class="info-sec info-sec-2">
+		        <div class="timeline timeline1">
+		            <ul>
+		                <li class="title"><span class="title-text">2011</span><span class="corner"></span></li>
+		                <li>8月上线iOS版本</li>
+		                <li>12月上线Android版本</li>
+		            </ul>
+		            <div class="tipline">
+		                <div class="tail"></div>
+		            </div>
+		        </div>
+		    </section> -->
+		
+		   <!-- <section class="info-sec info-sec-3">
+		        <h2>欣属团队</h2>
+		        <p>截至2019年12月31日，公司员工（含探探）合计2350人。</p>
+		    </section> -->
+		
+		   <!-- <ul class="introduce">
+		        <li>
+		            <h3>季鹏</h3>
+		            <div class="block"></div>
+		            <p>董事长</p>
+		            <p>联合创始人</p>
+		            <p>首席执行官</p>
+		        </li>
+		        <li>
+		            <h3>周舟</h3>
+		            <div class="block"></div>
+		            <p>董事</p>
+		            <p>总裁</p>
+		            <p>首席运营官</p>
+		        </li>
+		    </ul> -->
+		
+		
+		</div>
+		<script>
+		    $(function(){
+		        $('.common-header .about').addClass('on');
+		
+		        $('.photo').on('mouseover',function(){
+		            $(this).find('.cover').show();
+		        }).on('mouseout',function(){
+		            $(this).find('.cover').hide();
+		        });
+		
+		    });
+		</script>
+		
+		    <style>
+		    .common-footer ul{
+		        /* width: 428px !important; */
+		    }
+		    .common-footer li{
+		        margin: 0 17px 30px 17px;
+		    }
+		</style>
+		<footer class="common-footer">
+		    <ul class="clearfix" style="width: 510px;">
+		        <li><a href="../static/shuappnew.rar">下载欣属</a></li>
+		        <li><a href="./about_shu.html">关于欣属</a></li>
+		        <li><a href="./xieyi.html">用户协议</a></li>
+		<!--        <li><a href="http://www.immomo.com/jobs">招聘信息</a></li>-->
+		        <li><a href="../pages/build.html">招聘信息</a></li>
+		       <!-- <li><a href="http://www.immomo.com/contact_us.html">联系我们</a></li> -->
+		<!--        <li><a href="http://www.immomo.com/?v=en">English</a></li>-->
+		     <!--   <li><a href="https://pc.immomo.com">陌陌电脑版</a></li> -->
+		    </ul>
+		    <p>违法和不良信息举报电话: 0517-89229689（7*24小时)</p>
+		    <p><a href="http://www.12377.cn">中国互联网举报中心：12377</a></p>
+		    <p><a href="http://www.12377.cn">网上有害信息举报专区</a></p>
+		  <!--  <p>www.immomo.com 2011-2020 © All Rights Reserved.</p> -->
+		    <p>
+				<!-- <a href="http://www.immomo.com/licence.html?type=5">营业执照： 911101055790551576</a>&nbsp;&nbsp;&nbsp; -->
+				<!--<a href="http://www.immomo.com/licence.html?type=6">出版物经营许可证新出发京零字第朝150033​号</a>-->
+			</p>
+		    <!-- <p><a href="http://www.immomo.com/licence.html?type=1">增值电信业务经营许可证：京ICP证120107号</a>&nbsp;&nbsp;&nbsp;<a href="http://www.immomo.com/licence.html?type=2">网络文化经营许可证：京网文【2017】9364-1070号</a></p>
+		    <p><a href="http://www.immomo.com/licence.html?type=8">互联网药品信息服务资格证书：（京）-经营性-2018-0219</a>&nbsp;&nbsp;&nbsp;</p>
+		    <p><a href="http://www.immomo.com/licence.html?type=3">广播电视节目制作经营许可证：（京）字第04106号</a>&nbsp;&nbsp;&nbsp;<a href="http://www.immomo.com/licence.html?type=4">营业性演出许可证：京演（机构）{2015}2300号</a></p> -->
+		    <div style="width:350px;margin:0 auto;overflow: hidden">
+		        <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010502015324" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;float: left">
+		            <img src="https://s.momocdn.com/w/u/others/2017/10/20/1508498819600-%E5%A4%87%E6%A1%88%E5%9B%BE%E6%A0%87.png" style="float:left;width: 16px;margin-top: 3px;">
+		            <span style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px">苏ICP备18009690号</span>
+		        </a>
+		        <a target="_blank" href="http://www.beian.miit.gov.cn/state/outPortal/loginPortal.action" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;float: left">
+		            <span style="float: left">苏ICP备18009690号</span>
+					<div class="copyright">版权所有：淮安蓝创科技网络科技有限公司 <a href="http://www.beian.miit.gov.cn" target="_blank" style="color: #fff;">苏ICP备18009690号</a> </div>
+					</div>
+		        </a>
+		    </div>
+		<!--    京公网安备：11010502015324&nbsp;&nbsp;&nbsp;京ICP备11036675号-2</p>-->
+		    <script>
+		        !function(){
+		            if(window.console){
+		                console.log("%cMoMo","color:#1e78e7;text-shadow: 0 1px 0 #ccc,0 2px 0 #c9c9c9,0 3px 0 #bbb,0 4px 0 #b9b9b9,0 5px 0 #aaa,0 6px 1px rgba(0,0,0,.1),0 0 5px rgba(0,0,0,.1),0 1px 3px rgba(0,0,0,.3),0 3px 5px rgba(0,0,0,.2),0 5px 10px rgba(0,0,0,.25),0 10px 10px rgba(0,0,0,.2),0 20px 20px rgba(0,0,0,.15);font-size:24px")
+		                console.log("你应该掌握比那些外语系毕业的家伙更多的语言\n你应该对你设计的代码有高度洁癖，让它高大上\n你应该充满好奇心，关注时下好玩的技术\n你应该懂得充分吸收大牛们的营养\n你应该加入我们，陌陌分之一\n");
+		                console.log("请将简历发送至 %c hr@immomo.com（ 邮件标题请以“姓名-应聘XX职位-来自官网console”命名）","color:#1e78e7");
+		                console.log("职位介绍：http://www.immomo.com/jobs")
+		            }
+		        }()
+		    </script>
+		</footer>
+		
+		</body>
+	</head>
+	<body>
+	</body>
+</html>
